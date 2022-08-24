@@ -1,99 +1,17 @@
-{
-    "Images": [
-        "png",
-        "jpg",
-        "jfif",
-        "webp",
-        "jpeg",
-        "bmp",
-        "tiff",
-        "gif",
-        "raw",
-        "psd",
-    ],
-    "Documents": ["doc", "docx", "ppt", "pptx", "xls", "xlsx", "txt", "odt"],
-    "books": [
-        "pdf",
-        "epub",
-        "azw3",
-        "mobi",
-        "djvu",
-        {
-            "subject": {
-                "Math": [
-                    "Math",
-                    "Mathematics",
-                    "Matemática",
-                    "Numbers",
-                    "Números",
-                    "Algebra",
-                ],
-                "Philosophy": ["Philosophy", "Filosofia", "moral", "ethics", "ética"],
-                "Biology": [
-                    "Biology",
-                    "Ecology",
-                    "Bio",
-                    "Cell",
-                    "Célula",
-                    "Animals",
-                    "Animais",
-                    "Evolution",
-                    "Evolução",
-                ],
-                "History": ["History", "História"],
-                "Engenharia": ["Engenharia", "engineering", "engineer"],
-                "Telecom": [
-                    "Communications",
-                    "Comunicações",
-                    "Wireless",
-                    "Eletromagnetism",
-                    "Eletromagnetismo",
-                    "Circuitos",
-                    "Circuits",
-                    "Eletrônica",
-                    "Eletronics",
-                    "Sem fio",
-                    "5G",
-                    "4G",
-                    "Propagation",
-                    "Propagação",
-                ],
-                "Chemistry": ["Chemistry", "Química"],
-                "Arte": ["Art", "Arte", "Draw", "Drawing"],
-                "Poesia": ["Poesia", "Poetry"],
-                "Science": ["Science", "ciência", "cientific"],
-                "Earth": ["Earth"],
-                "Puzzles": ["Puzzles"],
-                "Física": ["Physics", "Física"],
-                "Programming": [
-                    "Programming",
-                    "code",
-                    "coding",
-                    "Python",
-                    "C++",
-                    "C",
-                    "Django",
-                    "Flask",
-                    "Javascript",
-                    "Node",
-                    "Web",
-                    "Docker",
-                    "Kubernetes",
-                    "Linux",
-                    "Bash",
-                    "Algoritmos",
-                    "Algorithms",
-                    "Computer",
-                    "Networks",
-                ],
-                "Music": ["Music", "Musics", "Música"],
-                "Creativity": ["Creativity", "Criatividade"],
-                "Others": [""],
-            }
-        },
-    ],
-    "Videos": ["mp4", "mpeg", "mkv", "srt"],
-    "Code": ["html", "css", "js", "py", "cpp", "c"],
-    "Audio": ["mp3", "wav", "ogg", "flac"],
-    "Compressed": ["zip", "tar", "rar"],
-}
+from tkinter import filedialog
+from pathlib import Path
+import json
+
+p = filedialog.askdirectory()#get Pathname as string
+PATH = Path(p)#FileSystem Path
+dest = PATH / "Organized"
+dest.mkdir(exist_ok=True)
+
+f = open('./folder_structure.json')
+folders_structure = json.load(f)
+
+files = [i for i in PATH.iterdir() if i.is_file()]
+
+for file in files:
+    
+
