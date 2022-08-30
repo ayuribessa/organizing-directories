@@ -1,32 +1,32 @@
 {
   "Images": [
-    "png",
-    "jpg",
-    "jfif",
-    "webp",
-    "jpeg",
-    "bmp",
-    "tiff",
-    "gif",
-    "raw",
-    "psd"
+    ".png",
+    ".jpg",
+    ".jfif",
+    ".webp",
+    ".jpeg",
+    ".bmp",
+    ".tiff",
+    ".gif",
+    ".raw",
+    ".psd"
   ],
   "Documents": [
-    "doc",
-    "docx",
-    "ppt",
-    "pptx",
-    "xls",
-    "xlsx",
-    "txt",
-    "odt"
+    ".doc",
+    ".docx",
+    ".ppt",
+    ".pptx",
+    ".xls",
+    ".xlsx",
+    ".txt",
+    ".odt"
   ],
   "books": [
-    "pdf",
-    "epub",
-    "azw3",
-    "mobi",
-    "djvu",
+    ".pdf",
+    ".epub",
+    ".azw3",
+    ".mobi",
+    ".djvu",
     {
       "subject": {
         "Math": [
@@ -146,28 +146,28 @@
     }
   ],
   "Videos": [
-    "mp4",
-    "mpeg",
-    "mkv",
-    "srt"
+    ".mp4",
+    ".mpeg",
+    ".mkv",
+    ".srt"
   ],
   "Code": [
-    "html",
-    "css",
-    "js",
-    "py",
-    "cpp",
-    "c"
+    ".html",
+    ".css",
+    ".js",
+    ".py",
+    ".cpp",
+    ".c"
   ],
   "Audio": [
-    "mp3",
-    "wav",
-    "ogg",
-    "flac"
+    ".mp3",
+    ".wav",
+    ".ogg",
+    ".flac"
   ],
   "Compressed": [
-    "zip",
-    "tar",
-    "rar"
+    ".zip",
+    ".tar",
+    ".rar"
   ]
 }
