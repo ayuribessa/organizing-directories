@@ -18,24 +18,15 @@ for file in files:
             # if the file extension is a book extension
             if key == "books":
                 # iterate through de subjects
-                for book_subject in folders_structure[key][5].get("subject").keys():
-                    if file.name.split() in folders_structure[key][5].get(
-                        "subject"
-                    ).get(
-                        book_subject
-                    ) or file.name.lower().split() in folders_structure[
-                        key
-                    ][
-                        5
-                    ].get(
-                        "subject"
-                    ).get(
-                        book_subject
-                    ):
-                        # if file.name in folders_structure[key][book_subject] or file.name:
-                        destiny_folder = PATH / f"{key}" / f"{book_subject}"
-                        destiny_folder.mkdir(exist_ok=True)
-                        shutil.move(str(file.resolve()), str(destiny_folder))
+                a = folders_structure[key][5].get("subject").keys()
+                b = file.name.split()
+                has_it = [True for a_ in a if a_ in b or a_.lower() in b]
+
+                if hast_it:
+                    # if file.name in folders_structure[key][book_subject] or file.name:
+                    destiny_folder = PATH / f"{key}" / f"{book_subject}"
+                    destiny_folder.mkdir(exist_ok=True)
+                    shutil.move(str(file.resolve()), str(destiny_folder))
             else:
                 destiny_folder = PATH / f"{key}"
                 destiny_folder.mkdir(exist_ok=True)
