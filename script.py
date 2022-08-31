@@ -16,10 +16,9 @@ for file in files:
         # if the file extension match any of the extension list inside the key
         if file.suffix in folders_structure[key]:
             # if the file extension is a book extension
-            if key == "books":
+            if key == "Books":
                 # get te subjects and iterate through them
-                books_subjects = folders_structure[key][5].get(
-                    "subject").keys()
+                books_subjects = folders_structure[key][5].get("subject").keys()
                 filename_words = file.name.split()
                 for subject in books_subjects:
                     has_it = True if subject in filename_words else False
