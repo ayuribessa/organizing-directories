@@ -19,13 +19,12 @@ for file in files:
             if key == "Books":
                 # get te subjects and iterate through them
                 books_subjects = folders_structure[key][5].get("subject")
-                filename_words = file.name.split()
                 for subject in books_subjects:
                     subject_list = books_subjects.get(subject)
-                    check = any(item in subject_list for item in filename_words)
+                    check = any(item in file.name for item in subject_list)
                     if check:
                         destiny_folder = PATH / f"{key}" / f"{subject}"
-                        destiny_folder.mkdir(exist_ok=True)
+                        destiny_folder.mkdir(parent=True, exist_ok=True)
                         shutil.move(str(file.resolve()), str(destiny_folder))
                     break
 
